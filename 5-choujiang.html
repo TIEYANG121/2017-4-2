@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>抽奖</button>
+	<script>
+    var studentArr = [
+        "超人",
+        "蝙蝠侠",
+        "钢铁侠",
+        "绿巨人",
+        "黑寡妇",
+        "鹰眼",
+        "猩红女巫",
+        "美国队长",
+        "蜘蛛侠",
+        "蚁人"
+    ];
+
+    var newArr = [];
+
+    function getStudent(){
+        var ind = Math.floor(Math.random() * studentArr.length);
+
+        if(newArr.length === studentArr.length){
+            console.log('抽奖结束');
+            return;
+        }
+
+        if(newArr.indexOf(studentArr[ind]) === -1){
+            newArr.push(studentArr[ind]);
+            console.log(studentArr[ind]);
+        }else{
+            getStudent();
+        }
+        
+    }
+
+    document.querySelector('button').onclick = getStudent;
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr = [1,5,8,7,2,6,9];
+
+		function bubbleSort(){
+			var len = arr.length;
+			for(var i = len - 1;i>0;i--){
+				for(var j = 0;j<i;j++){
+					if(arr[j]>arr[j+1]){
+						[arr[j],arr[j+1]] = [arr[j+1],arr[j]];
+					}
+				}
+			}
+		}
+
+		bubbleSort(arr);
+		console.log(arr);
+
+	</script>
+</body>
+</html>
